@@ -1,0 +1,100 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+body{
+background: linear-gradient(45deg, #16232E, #081018);
+height: 100vh;
+
+}
+#container{
+    position: absolute;
+    top: 10%;
+    left:10%;
+    right:10%;
+    bottom:10%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background:url(fond.png) #050b0f;
+box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+#container .content{
+    max-width: 600px;
+    text-align: center;
+}
+#container .content h2{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18vw;
+    color: white;
+    line-height: 1em;
+}
+#container .content h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    position: relative;
+    font-size: 2vw;
+    margin-bottom: 20px;
+    color: #16232E;
+    background-color: white;
+    border-radius: 5px;
+}
+
+ a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: hidden;
+}
+p{
+    position: absolute;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 2px;
+    
+}
+svg {
+    height: 10em;
+    width: 10em;
+    position: relative;
+  
+}
+path{
+    fill:transparent;
+    stroke-width:7px;
+    stroke:#09e1c0;
+}
+svg:hover path{
+    fill:#09e1c0;
+}
+
+footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+position:absolute;
+display: flex;
+justify-content: center;
+bottom:0;
+width:100%;
+}
+footer #linkedin{
+    position: relative;
+    padding: 1vw;
+    color: white;
+    background: #16232E;
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    font-size: 1em;
+    box-shadow: 0 0 10px 1px black;
+    margin-bottom: 1em;
+}
