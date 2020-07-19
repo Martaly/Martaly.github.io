@@ -1,1 +1,1 @@
-# page-404-2
+# 404 error page for Becode
