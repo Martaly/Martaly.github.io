@@ -4,11 +4,38 @@
     box-sizing: border-box;
 }
 body{
-background: linear-gradient(45deg, #16232E, #081018);
+background: linear-gradient(45deg, #235060, #081018,#081018,#081018,#235060);
 height: 100vh;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+font-family: monospace;
 }
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
 #container{
     position: absolute;
     top: 10%;
@@ -20,26 +47,34 @@ justify-content: center;
 align-items: center;
 border-radius: 10px;
 background:url(fond.png) #050b0f;
-box-shadow: 0 15px 30px rgba(0,0,0,.5);
+box-shadow: 0 0px 10px rgba(0,0,0,.5);
 }
 #container .content{
     max-width: 600px;
     text-align: center;
 }
 #container .content h2{
-    font-size: 18vw;
-    color: white;
+    font-size: 10em;
+        color: white;
     line-height: 1em;
 }
 #container .content h3{
 
-    position: relative;
+    /*position: relative;
     font-size: 1.5vw;
     margin-bottom: 20px;
     color: #16232E;
     background-color: white;
     border-radius: 5px;
-    padding:5px;
+    padding:5px;*/
+    position: relative;
+    font-size: 1.1em;
+    margin-bottom:1em;
+    color: white;
+    background: rgba(0,0,0,.5);
+    padding: 1em;
+    border-radius: 10px;
+    line-height: 1.5em;
 }
 
  a{
@@ -53,24 +88,49 @@ box-shadow: 0 15px 30px rgba(0,0,0,.5);
 p{
     position: absolute;
     color: white;
-    font-size: 1em;
+    font-size: 0.7em;
     letter-spacing: 2px;
+    line-height: 2em;
     
 }
 svg {
     height: 10em;
     width: 10em;
     position: relative;
-  
+    stroke-dasharray: 3185;
+        stroke-dashoffset: 0; 
+  transition:transform 2.5s;
+}
+svg:hover{
+    transform:rotate(360deg) translateZ(0);
 }
 path{
     fill:transparent;
     stroke-width:7px;
-    stroke:#09e1c0;
+    stroke:#235060;
+    animation: animate-star 3s linear infinite;
 }
 svg:hover path{
-    fill:#09e1c0;
+    fill:#33758d;
+    
 }
+@keyframes animate-star {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 3185;
+    }
+    80%{
+        stroke-dashoffset: 6370;
+        fill:transparent;
+    }
+    100%{
+        stroke-dashoffset: 6370;
+        fill: #09e1c0;
+    }
+}
+
 
 footer{
 
@@ -82,14 +142,18 @@ width:100%;
 }
 footer #linkedin{
     position: relative;
-    padding: 1vw;
+    padding: 0.7vw;
     color: white;
     background: #16232E;
-    border-radius: 10px;
+    border-radius: 7px;
     text-decoration: none;
-    letter-spacing: 2px;
-    overflow: hidden;
+    letter-spacing: 0.1em;
     font-size: 1em;
-    box-shadow: 0 0 10px 1px black;
-    margin-bottom: 1em;
+    /*box-shadow: 0 0 10px 1px black;*/
+    margin-bottom: 1.5em;
 }
+footer #linkedin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0px 20px black;
+}
+
