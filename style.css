@@ -8,6 +8,17 @@ background: linear-gradient(45deg, #235060, #081018,#081018,#081018,#235060);
 height: 100vh;
 font-family: monospace;
 }
+header{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 5em;
+}
+header a{
+    color:white;
+    cursor: pointer;
+}
 .bg {
     position: fixed;
     top: -50%;
@@ -74,7 +85,7 @@ box-shadow: 0 0px 10px rgba(0,0,0,.5);
     background: rgba(0,0,0,.5);
     padding: 1em;
     border-radius: 10px;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
  a{
